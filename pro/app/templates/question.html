@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Chat PDF App - Ask a Question</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ask a Question</h1>
+        <p>Extracted PDF Text:</p>
+        <pre>{{ pdf_text }}</pre>
+        <form action="{{ url_for('question', pdf_path=pdf_path) }}" method="post">
+            <label for="question">Enter your question:</label>
+            <input type="text" name="question" required>
+            <button type="submit">Ask</button>
+        </form>
+    </div>
+</body>
+</html>

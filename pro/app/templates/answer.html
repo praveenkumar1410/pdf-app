@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Chat PDF App - Answer</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Question:</h1>
+        <p>{{ question }}</p>
+        <h2>Bot's Answer:</h2>
+        <p>{{ answer }}</p>
+    </div>
+</body>
+</html>
